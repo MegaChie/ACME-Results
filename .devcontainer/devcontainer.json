@@ -11,7 +11,7 @@
     },
     "customizations": {
         "codespaces": {
-            "openFiles": []
+            "Backend Part": ["cd Results/backend/"]
         },
         "vscode": {
             "extensions": [
