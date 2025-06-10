@@ -18,7 +18,7 @@ class Faculty(models.Model):
 
     def __str__(self):
         """
-        returns the discription of the faculty.
+        Prints the discription of the faculty.
         """
         return f"{self.name}: {self.description}"
     
