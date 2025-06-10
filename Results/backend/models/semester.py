@@ -25,7 +25,7 @@ class Semester(models.Model):
     ]
     number = models.IntegerField(null=False, unique=True,
                                  choices=semester_choices)
-    ID = models.UUIDField(default=uuid4, primary_key=True, unique=True)
+    ID = models.UUIDField(default=uuid4, primary_key=True)
 
     def __str__(self):
         """

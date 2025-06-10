@@ -11,9 +11,8 @@ class Faculty(models.Model):
     """
     Model for the different faculties.
     """
-    ID = models.UUIDField(default=uuid4, primary_key=True,
-                          unique=True)
-    name = models.CharField(max_length=128)
+    ID = models.UUIDField(default=uuid4, primary_key=True)
+    name = models.CharField(max_length=128, blank=True, null=True)
     description = models.TextField(blank=True)
 
     def __str__(self):

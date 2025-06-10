@@ -4,14 +4,16 @@ Dectates the model for the year of registration.
 """
 # Might be added later as part of the student Model.
 from django.db import models
+from uuid import uuid4
 
 
 class Year(models.Model):
     """
     Model for the study year.
     """
-    start_year = models.PositiveBigIntegerField(null=False)
-    end_year = models.IntegerField(blank=True) 
+    ID = models.UUIDField(primary_key=True)
+    start_year = models.PositiveBigIntegerField(null=False, unique=True)
+    end_year = models.IntegerField() 
 
     def __str__(self) -> str:
         """
