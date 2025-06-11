@@ -12,7 +12,7 @@ class StudentView(generics.ListCreateAPIView):
     """
     Controls HTTP GET and POST Requests.
     """
-    queryset = Student.objects,all()
+    queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
 
