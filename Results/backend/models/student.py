@@ -13,12 +13,12 @@ class Student(models.Model):
     """
     Model for the students inlisted.
     """
-    ID = models.UUIDField(primary_key=True, default=uuid4)
+    ID = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     name = models.CharField(max_length=128, blank=True, null=True)
     registeration_year = models.ForeignKey(Year, on_delete=models.CASCADE)
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     phone_number = models.CharField(max_length=16, blank=True, null=True)
-    email = models.CharField(max_length=128, blank=True, null=True)
+    email = models.EmailField(max_length=128, blank=True, null=True)
 
     def __str__(self) -> str:
         """

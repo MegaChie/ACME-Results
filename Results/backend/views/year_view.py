@@ -16,7 +16,7 @@ class YearView(generics.ListCreateAPIView):
     serializer_class = YearSerializer
 
 
-class YearDestroyView(generics.DestroyAPIView):
+class YearDeleteView(generics.DestroyAPIView):
     """
     Controls HTTP DELETE Requests.
     """

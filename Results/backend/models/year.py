@@ -11,9 +11,9 @@ class Year(models.Model):
     """
     Model for the study year.
     """
-    ID = models.UUIDField(primary_key=True)
+    ID = models.UUIDField(primary_key=True, editable=False, default=uuid4)
     start_year = models.PositiveBigIntegerField(null=False, unique=True)
-    end_year = models.IntegerField() 
+    end_year = models.IntegerField(blank=True, null=True) 
 
     def __str__(self) -> str:
         """
