@@ -38,5 +38,5 @@ class Semester(models.Model):
         Sets the meta information for the model.
         """
         indexes = [
-            models.Index(fields=["ID"])
+            models.Index(fields=["number"])
             ]

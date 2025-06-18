@@ -11,7 +11,6 @@
     },
     "customizations": {
         "codespaces": {
-            "Backend Part": ["cd Results/backend/"]
         },
         "vscode": {
             "extensions": [
@@ -21,8 +20,7 @@
     },
     "portsAttributes": {
         "8000": {
-            "label": "Application",
-            "onAutoForward": "openPreview"
+            "label": "Application"
         }
     },
     "forwardPorts": [

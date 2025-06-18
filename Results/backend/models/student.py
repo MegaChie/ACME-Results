@@ -26,7 +26,15 @@ class Student(models.Model):
         """
         intel =  [f"Student {self.name} studies at {self.faculty.name}:\n"]
         for attr, value in self.__dict__.items():
-            intel.append(f"\t- {attr}: {value}\n")
+            if attr is not "_state":
+                intel.append(f"\t- {attr}: {value}\n")
         
         return "".join(intel)
 
+    class Meta:
+        """
+        Sets the meta information for the model.
+        """
+        indexes = [
+            models.Index(fields=["ID"])
+            ]

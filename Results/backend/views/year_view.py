@@ -14,19 +14,3 @@ class YearView(generics.ListCreateAPIView):
     """
     queryset = Year.objects.all()
     serializer_class = YearSerializer
-
-
-class YearDeleteView(generics.DestroyAPIView):
-    """
-    Controls HTTP DELETE Requests.
-    """
-    queryset = Year.objects.all()
-    serializer_class = YearSerializer
-
-
-class YearUpdateView(generics.UpdateAPIView):
-    """
-    Controls HTTP PUT Requests.
-    """
-    queryset = Year.objects.all()
-    serializer_class = YearSerializer

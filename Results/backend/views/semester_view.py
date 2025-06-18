@@ -14,19 +14,3 @@ class SemesterView(generics.ListCreateAPIView):
     """
     queryset = Semester.objects.all()
     serializer_class = SemesterSerializer
-
-
-class SemesterDeleteView(generics.DestroyAPIView):
-    """
-    Controls HTTP DELETE Requests.
-    """
-    queryset = Semester.objects.all()
-    serializer_class = SemesterSerializer
-
-
-class SemesterUpdateView(generics.UpdateAPIView):
-    """
-    Controls HTTP PUT Requests.
-    """
-    queryset = Semester.objects.all()
-    serializer_class = SemesterSerializer

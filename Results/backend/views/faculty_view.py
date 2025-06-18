@@ -14,19 +14,3 @@ class FacultyView(generics.ListCreateAPIView):
     """
     queryset = Faculty.objects.all()
     serializer_class = FacultySerializer
-
-
-class FacultyDeleteView(generics.DestroyAPIView):
-    """
-    Controls HTTP DELETE Requests.
-    """
-    queryset = Faculty.objects.all()
-    serializer_class = FacultySerializer
-
-
-class FacultyUpdateView(generics.UpdateAPIView):
-    """
-    Controls HTTP PUT Requests.
-    """
-    queryset = Faculty.objects.all()
-    serializer_class = FacultySerializer

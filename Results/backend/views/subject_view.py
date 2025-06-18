@@ -14,19 +14,3 @@ class SubjectView(generics.ListCreateAPIView):
     """
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
-
-
-class SubjectDeleteView(generics.DestroyAPIView):
-    """
-    Controls HTTP DELETE Requests.
-    """
-    queryset = Subject.objects.all()
-    serializer_class = SubjectSerializer
-
-
-class SubjecUpdateView(generics.UpdateAPIView):
-    """
-    Controls HTTP PUT Requests.
-    """
-    queryset = Subject.objects.all()
-    serializer_class = SubjectSerializer
